@@ -7,6 +7,32 @@
    <link rel="stylesheet" href="stylesheet.css">
    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
    <script src="script.js"></script>
+   <script>
+		function validate() {
+		var name=document.getElementById("name").value;
+		var skills=document.getElementById("skills").value;
+		var opportunities = document.getElementById("opportunities");
+		var male=document.getElementById("male").value;
+		var female=document.getElementById("female").value;
+		
+		if (!isNaN(name)) {
+			alert("Please enter a valid name.");
+			return false;
+		}
+		if (!isNaN(skills)) {
+			alert("Please enter a valid skill(s).");
+			return false;
+		}
+		if (!isNaN(opportunities)) {
+			alert("Please enter a valid opportunity.");
+			return false;
+		}
+		if (!male.checked && !female.checked) {
+			alert("Please select a gender.");
+			return false;
+		}
+	}
+   </script>
 <title>People For People</title>
 </head>
 <body>
@@ -37,18 +63,18 @@
 	<br>
 
 	<div class = 'form_volunteer'>
-	<form>
+	<form onsubmit="validate()">
 	<fieldset align = "center">
 	Name <br>
 	<input name = "name" id = "name"/><br><br>
 	
 	Gender <br>
-	<input type="radio" name="gender" value="male">Male<br>
-	<input type="radio" name="gender" value="female">Female
+	<input type="radio" name="gender" id="male" value="male">Male<br>
+	<input type="radio" name="gender" id="female" value="female">Female
 
 	<br><br>
 	E-mail Address <br>
-	<input name = "email" id = "email"/><br><br>
+	<input type = "email" name = "email" id = "email"/><br><br>
 	
 	Country <br>
 	<input name = "country" id = "country"/><br><br>
@@ -58,7 +84,7 @@
 	
 	Volunteer Opportunities <br>
 	<select name = "opport" style = "font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
-	font-size: 18px;">
+	font-size: 18px;" id="opportunities">
 		<option value = 'option1'>Option 1</option>
 		<option value = 'option2'>Option 2</option>
 		<option value = 'option3'>Option 3</option>
@@ -66,7 +92,7 @@
 	<br><br>
 	
 	<input type = "submit" value ="Volunteer" style = "font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
-	font-size: 22px; width: 150px; border: 3px solid blue;">
+	font-size: 22px; width: 150px; border: 1px solid black;">
 
 	</fieldset>
 	</form>

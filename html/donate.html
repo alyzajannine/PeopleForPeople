@@ -7,6 +7,29 @@
    <link rel="stylesheet" href="stylesheet.css">
    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
    <script src="script.js"></script>
+   <script>
+		function validate() {
+			var name=document.getElementById("name").value;
+			var contactNum=document.getElementById("contactNum").value;
+			var cash=document.getElementById("cash").value;
+			var goods=document.getElementById("goods").value;
+			var bank=document.getElementById("bank").value;
+		
+			if (!isNaN(name)) {
+				alert("Please enter a valid name.");
+				return false;
+			}
+			if (isNaN(contactNum)) {
+				alert("Please enter a valid contact number.");
+				return false;
+			}
+			if (!cash.checked && !goods.checked &&
+				!bank.checked) {
+				alert("Please select a type of donation.");
+				return false;
+			}
+		}
+   </script>
 <title>People For People</title>
 </head>
 <body>
@@ -42,28 +65,28 @@
 	</div>
 
 	<div class = 'form_donate'>
-	<form>
+	<form onsubmit="validate()">
 	<fieldset align = "center">
 	Name <br>
 	<input name = "name" id = "name"/><br><br>
 
 	<br>
 	E-mail Address <br>
-	<input name = "email" id = "email"/><br><br>
+	<input type = "email" name = "email" id = "email"/><br><br>
 	
 	<br>
 	Contact Number<br>
-	<input name = "contact_no" id = "contact_no"/><br><br>
+	<input name = "contactNum" id = "contactNum"/><br><br>
 	
 	<br>
 	Type of Donation <br>
-	<input type="radio" name="type_of_donation" value="cash">Cash<br>
-	<input type="radio" name="type_of_donation" value="goods">Goods<br>
-	<input type="radio" name="type_of_donation" value="bank">Via Bank Account<br>
+	<input type="radio" name="type_of_donation" id="cash" value="cash">Cash<br>
+	<input type="radio" name="type_of_donation" id="goods" value="goods">Goods<br>
+	<input type="radio" name="type_of_donation" id="bank" value="bank">Via Bank Account<br>
 	
 	<br><br>
 	<input type = "submit" value ="Donate" style = "font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
-	font-size: 22px; width: 150px; border: 3px solid blue;">
+	font-size: 22px; width: 150px; border: 1px solid black;">
 
 	</fieldset>
 	</form>

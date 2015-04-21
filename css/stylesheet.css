@@ -8,10 +8,6 @@ html {
 }
 
 .heading {
-<<<<<<< HEAD
-=======
-	
->>>>>>> origin/master
 	background: #7E9F35;
 	border-radius: 5px;
 	border-bottom-color: black;
@@ -445,7 +441,6 @@ html {
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
 	font-size: 20px;
 	padding: 5px;
-<<<<<<< HEAD
 	text-align: center;
 	//padding-top: 25px;
 }
@@ -460,8 +455,4 @@ html {
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	font-size: 32px;
 	color: white;
-=======
-	text-align: center;
-	//padding-top: 25px;
->>>>>>> origin/master
 }

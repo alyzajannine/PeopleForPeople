@@ -4,21 +4,15 @@
 <meta charset='utf-8'>
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="..\css\stylesheet.css">
-  	<link href="..\css\font2.css" rel="stylesheet" type="text/css" />
+   <link rel="stylesheet" href="..\css\stylesheet.css">
+   <link href="..\css\font1.css" rel="stylesheet" type="text/css" />
+	<link href="..\css\font2.css" rel="stylesheet" type="text/css" />
 	<link href="..\css\font3.css" rel="stylesheet" type="text/css" />
+	<link href="..\css\font7.css" rel="stylesheet" type="text/css" />
+	<link href="..\css\font8.css" rel="stylesheet" type="text/css" />
+
    <script src="..\js\jquery-latest.min.js" type="text/javascript"></script>
    <script src="script.js"></script>
-   <script>
-		function validate() {
-			var name=document.getElementById("name").value;
-		
-			if (!isNaN(name)) {
-				alert("Please enter a valid name.");
-				return false;
-			}
-		}
-   </script>
 <title>People For People</title>
 </head>
 <body>
@@ -44,56 +38,13 @@
 		</ul>
 	</div>
 	
-	<div class='title'>
-		<p>Contact Us</p>
+	<div class = 'thanks'>
+		Thank you for joining the movement!
 	</div>
-	
 	<br>
-
-	<div class = 'form_contact'>
-	<form onsubmit="validate()">
-	<fieldset align = "center">
-	Name <br>
-	<input name = "name" id = "name"/><br><br>
-
-	<br>
-	E-mail Address <br>
-	<input type = "email" name = "email" id = "email"/><br><br>
-	
-	<br>
-	Comment/Message <br>
-	<textarea rows="10" cols="40">
-	/* Multiple lines of comment here. */ 
-	</textarea><br><br>
-	<br><br>
-	
-	<input type = "submit" value ="Send" style = "font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
-	font-size: 22px; width: 150px; border: 1px solid black;">
-
-	</fieldset>
-	</form>
-	</div>
-	
-	<div class = "contact_info">
-	Contact Information
-	<br><br>
-	<address>
-	Contact Numbers <br>
-	Place <br>
-	<br>
-	Bank Account <br>
-	Branch <br>
-	<br>
-	Mailing Address
-	</address>
-	
-	<br><br>
-	<img src = "..\images\world.png"> 
-	</div>
 	
 	<div class='footer'>
 		<p id = 'developers'> © Bautista, Sangalang </p>
 	</div>
-
 </body>
 </html>

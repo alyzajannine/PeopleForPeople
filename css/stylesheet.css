@@ -1,6 +1,6 @@
 @CHARSET "ISO-8859-1";
 html { 
-  background: url("..\images\clouds.jpg") no-repeat center center fixed; 
+  background: url(../images/bg5.JPG) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -8,7 +8,7 @@ html {
 }
 
 .heading {
-	background: #7E9F35;
+	background: url(../images/green1.JPG) fixed 50% / cover;
 	border-radius: 5px;
 	border-bottom-color: black;
 	border-bottom-width: 5px;
@@ -30,16 +30,17 @@ html {
 }
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,300);
 #cssmenu {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: normal;
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
-  text-align: left;
+  text-align: center;
 }
 #cssmenu > ul {
   list-style-type: none;
   padding: 0;
-  background: #151710;
+  background: url(../images/black2.jfif) fixed 50% / cover;
   border: 1px solid #151710;
   border-bottom: 3px solid #151710;
   -webkit-border-radius: 2px;
@@ -109,6 +110,7 @@ html {
   background: #d80041;
   color: #fff;
   text-shadow: 0px 1px 0px #000;
+    border-radius: 10px;
 }
 @media (max-width: 600px) {
   #cssmenu > ul {
@@ -186,6 +188,12 @@ html {
 	height: 100px;
 	margin-top: 590px;
 	left: 12.5%;
+	-webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+	-webkit-animation-iteration-count: infinite;
+    animation-name: example;
+    animation-duration: 4s;
+	animation-iteration-count: infinite;
 }
 
 .secondary_pics {
@@ -206,8 +214,10 @@ html {
 }
 
 .title {
-	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
-	font-size: 32px;
+	 font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    line-height: 1px;
+    font-size: 46px;
 	color: white;
 	background: #324900;
 	height: 70px;
@@ -216,6 +226,7 @@ html {
 	right: 0;
 	position: absolute;
 	text-align: center;
+
 }
 
 .title1 {
@@ -238,7 +249,7 @@ html {
 	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
 	font-size: 24px;
 	color: white;
-	background: #EDF1E6;
+	background: url(../images/green2.JPG) fixed 50% / cover;
 	top: 324px;
 	left: 0;
 	right: 50%;
@@ -254,7 +265,7 @@ html {
 	top: 324px;
 	right: 0;
 	position: absolute;
-	background: #EDF1E6;
+	background: url(../images/green2.JPG) fixed 50% / cover;
 	//border: 5px solid black;
 }
 
@@ -279,8 +290,9 @@ html {
 	left: 12.5%;
 	right: 10%;
 	margin-top: 520px;
-	font-size: 20px;
-	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+	font-family: 'Abel', sans-serif;
+    font-size: 17px;
+    line-height: 23px;
 }
 
 .pictures1 img {
@@ -305,8 +317,9 @@ html {
 	left: 12.5%;
 	right: 10%;
 	margin-top: 800px;
-	font-size: 20px;
-	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+	font-family: 'Abel', sans-serif;
+    font-size: 17px;
+    line-height: 23px;
 }
 
 .pictures2 img {
@@ -435,6 +448,21 @@ html {
 	top: 964px;
 	border-radius: 5px;
 }
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+}
 
 #developers {
 	color: white;
@@ -448,11 +476,22 @@ html {
 #Donate_button {
 	background: orange;
 	border-radius: 10px;	
-	
 }
+
 #motto {
 	text-align: center;
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
-	font-size: 32px;
+	font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    line-height: 26px;
+    font-size: 42px;
 	color: white;
+}
+
+.thanks {
+	font-family: 'Medula One', cursive;
+    font-weight: normal;
+    line-height: 46px;
+    font-size: 52px;
+	margin-top: 290px;
+	margin-left: 30%;
 }

@@ -12,7 +12,7 @@
 		function validate() {
 		var name=document.getElementById("name").value;
 		var skills=document.getElementById("skills").value;
-		var opportunities = document.getElementById("opportunities");
+		var country=document.getElementById("country").value;
 		var male=document.getElementById("male").value;
 		var female=document.getElementById("female").value;
 		
@@ -25,8 +25,9 @@
 			return false;
 		}
 		if (!isNaN(opportunities)) {
-			alert("Please enter a valid opportunity.");
+			alert("Please enter an opportunity.");
 			return false;
+		}
 		}
 		if (!male.checked && !female.checked) {
 			alert("Please select a gender.");
@@ -67,28 +68,31 @@
 	<br>
 
 	<div class = 'form_volunteer'>
-	<form onsubmit="validate()">
+	<form onsubmit="validate()" action = "thankyou.html">
 	<fieldset align = "center">
 	Name <br>
-	<input name = "name" id = "name"/><br><br>
+	<input name = "name" id = "name" required/><br><br>
 	
 	Gender <br>
-	<input type="radio" name="gender" id="male" value="male">Male<br>
-	<input type="radio" name="gender" id="female" value="female">Female
+	<select name = "gender" style = "font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
+	font-size: 18px;" id="gender" required>
+		<option value = 'male' id=male"">Male</option>
+		<option value = 'female' id="female">Female</option>
+	</select> 
 
 	<br><br>
 	E-mail Address <br>
-	<input type = "email" name = "email" id = "email"/><br><br>
+	<input type = "email" name = "email" id = "email" required/><br><br>
 	
 	Country <br>
-	<input name = "country" id = "country"/><br><br>
+	<input name = "country" id = "country" required/><br><br>
 	
 	Skills/Talent <br>
-	<input name = "skills" id = "skills"/><br><br>
+	<input name = "skills" id = "skills" required/><br><br>
 	
 	Volunteer Opportunities <br>
 	<select name = "opport" style = "font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
-	font-size: 18px;" id="opportunities">
+	font-size: 18px;" id="opportunities" required>
 		<option value = 'option1'>Option 1</option>
 		<option value = 'option2'>Option 2</option>
 		<option value = 'option3'>Option 3</option>

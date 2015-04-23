@@ -54,17 +54,17 @@
 	<form onsubmit="validate()">
 	<fieldset align = "center">
 	Name <br>
-	<input name = "name" id = "name"/><br><br>
+	<input name = "name" id = "name" required/><br><br>
 
 	<br>
 	E-mail Address <br>
-	<input type = "email" name = "email" id = "email"/><br><br>
+	<input type = "email" name = "email" id = "email" required/><br><br>
 	
 	<br>
 	Comment/Message <br>
-	<textarea rows="10" cols="40">
-	/* Multiple lines of comment here. */ 
-	</textarea><br><br>
+	
+	<textarea name="details" id="details" rows="10" cols="40" required></textarea>
+	<br><br>
 	<br><br>
 	
 	<input type = "submit" value ="Send" style = "font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
@@ -88,7 +88,7 @@
 	</address>
 	
 	<br><br>
-	<img src = "..\images\world.png"> 
+	<img src = "..\images\world.png" class="thumbnail" width="400px"> 
 	</div>
 	
 	<div class='footer'>

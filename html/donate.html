@@ -21,14 +21,20 @@
 				alert("Please enter a valid name.");
 				return false;
 			}
-			if (isNaN(contactNum)) {
+			
+			else {
+				if (isNaN(contactNum)) {
 				alert("Please enter a valid contact number.");
 				return false;
-			}
-			if (!cash.checked && !goods.checked &&
-				!bank.checked) {
-				alert("Please select a type of donation.");
-				return false;
+				}
+				
+				else {
+					if (!cash.checked && !goods.checked &&
+					!bank.checked) {
+					alert("Please select a type of donation.");
+					return false;
+					}
+				}
 			}
 		}
    </script>
@@ -73,21 +79,23 @@
 	<form onsubmit="validate()">
 	<fieldset align = "center">
 	Name <br>
-	<input name = "name" id = "name"/><br><br>
+	<input name = "name" id = "name" required/><br><br>
 
 	<br>
 	E-mail Address <br>
-	<input type = "email" name = "email" id = "email"/><br><br>
+	<input type = "email" name = "email" id = "email" required /><br><br>
 	
 	<br>
 	Contact Number<br>
-	<input name = "contactNum" id = "contactNum"/><br><br>
+	<input name = "contactNum" id = "contactNum" required/><br><br>
 	
 	<br>
 	Type of Donation <br>
-	<input type="radio" name="type_of_donation" id="cash" value="cash">Cash<br>
-	<input type="radio" name="type_of_donation" id="goods" value="goods">Goods<br>
-	<input type="radio" name="type_of_donation" id="bank" value="bank">Via Bank Account<br>
+	<select name = "donate" style = "font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
+	font-size: 18px;" id="donate">
+		<option value = 'cash' id="cash">Cash</option>
+		<option value = 'goods' id="goods">Goods</option>
+	</select> 
 	
 	<br><br>
 	<input type = "submit" value ="Donate" style = "font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
